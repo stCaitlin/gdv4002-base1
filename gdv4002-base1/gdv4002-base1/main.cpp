@@ -1,6 +1,10 @@
 #include "Engine.h"
 
+
 // Function prototypes
+
+
+// Global Variables
 
 
 int main(void) {
@@ -18,6 +22,11 @@ int main(void) {
 	//
 	// Setup game scene objects here
 	//
+
+	
+	//
+	// Set callback functions
+	//
 	
 
 	// Enter main loop - this handles update and render calls
@@ -29,5 +38,3 @@ int main(void) {
 	// return success :)
 	return 0;
 }
-
-

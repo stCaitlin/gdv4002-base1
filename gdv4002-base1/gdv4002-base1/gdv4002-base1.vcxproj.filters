@@ -39,6 +39,9 @@
     <ClCompile Include="GameObject2D.cpp">
       <Filter>Engine</Filter>
     </ClCompile>
+    <ClCompile Include="glPrint.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine.h">
@@ -60,6 +63,9 @@
       <Filter>Engine</Filter>
     </ClInclude>
     <ClInclude Include="GameObject2D.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="glPrint.h">
       <Filter>Engine</Filter>
     </ClInclude>
   </ItemGroup>
