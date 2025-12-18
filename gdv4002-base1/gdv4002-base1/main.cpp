@@ -77,5 +77,10 @@ int main(void) {
 
 void myUpdate(GLFWwindow* window, double tDelta) {
 
+	//float anglesPersecond = glm::radians(45.0f);
+	//float playerVelocity = 2.0f;
+	//float player1RoatationSpeed = glm::radians(90.0f);
+
+
 }
 
