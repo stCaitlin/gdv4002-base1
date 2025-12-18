@@ -3,11 +3,13 @@
 
 // Function prototypes
 
+void myUpdate(GLFWwindow* window, double tDelta);
 
 // Global Variables
 
 
 int main(void) {
+	//main function body
 
 	// Initialise the engine (create window, setup OpenGL backend)
 	int initResult = engineInit("GDV4002 - Applied Maths for Games", 1024, 1024);
@@ -17,47 +19,51 @@ int main(void) {
 
 		printf("Cannot setup game window!!!\n");
 		return initResult; // exit if setup failed
+
 	}
 
 	//
 	// Setup game scene objects here
 	//
 
-	
 	//
-	// Set callback functions
+	// addObject("player", glm::vec2(1.0f, 1.0f),glm::radians(45.0f), glm::vec2(0.5f, 1.0f),"Resources\\Textures\\mcblock01.png",TextureProperties::NearestFilterTexture());
 	//
-	
-	addObject("player",glm::vec2(1.0f,1.0f),45.0f
-	glm::radians(45.0f),glm::vec2(0.5f,1.0f),
-	"Resources\\Textures\\mcblock01.png",
-	TextureProperties::NearestFilterTexture());
 
-	addObject("player1")
-	addObject("player2")
+	addObject("player1");
+	addObject("player2");
 
-	GameObject2D* player1Object = 
-	getObject("player1");
-	
-	if (player1Object!=nullptr){
+	GameObject2D* player1Object = getObject("player1");
+
+	if (player1Object != nullptr) {
 		// update player1 here 
-		player1Object->position = 
-		glm::vec2(-1.0f,1.of);
+		player1Object->position =
+			glm::vec2(-1.0f, 1.0f);
 
 		player1Object->orientation = glm::radians(-30.0f);
 		player1Object->textureID = loadTexture("Resources\\Textures\\bumblebee.png");
 	}
 
-	GameObject2D* player2Object = 
-	getObject("player2");
+	GameObject2D* player2Object =getObject("player2");
 
 	if (player2Object != nullptr) {
 
-			player2Object->position = 
+		player2Object->position =
 			glm::vec2(1.5f, 1.0f);
 
-			player2Object->orientation = glm::radians(45.0f); 
+		player2Object->orientation = glm::radians(45.0f);
 	}
+	
+
+	setUpdateFunction(myUpdate);
+
+
+	//
+	// Set callback functions
+	//
+	
+
+
 	
 	// Enter main loop - this handles update and render calls
 	engineMainLoop();
@@ -68,3 +74,8 @@ int main(void) {
 	// return success :)
 	return 0;
 }
+
+void myUpdate(GLFWwindow* window, double tDelta) {
+
+}
+
