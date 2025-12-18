@@ -1,6 +1,10 @@
 #include "Engine.h"
 
+
 // Function prototypes
+
+
+// Global Variables
 
 
 int main(void) {
@@ -17,6 +21,11 @@ int main(void) {
 
 	//
 	// Setup game scene objects here
+	//
+
+	
+	//
+	// Set callback functions
 	//
 	
 	addObject("player",glm::vec2(1.0f,1.0f),45.0f
@@ -59,5 +68,3 @@ int main(void) {
 	// return success :)
 	return 0;
 }
-
-
