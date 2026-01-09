@@ -57,7 +57,15 @@ if (action == GLFW_PRESS) {
 		case GLFW_KEY_ESCAPE:
 		//If escape is pressed tell GLFW we want to close the window (and quit)
 		
-		glfwSetWindowShouldClose()
+		glfwSetWindowShouldClose(window,true);
+		break;
+	}
+}
+//if not pressed, check the key has just been released
+else if (action == GLFW_RELEASE) {
+
+// handle key release events
+
 	}
 }
 
