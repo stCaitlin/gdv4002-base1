@@ -68,9 +68,16 @@ void myUpdate(GLFWwindow* window, double tDelta) {
 
 GameObjectCollection enemies = getObjectCollection("enemy");
 
+for (int i = 0; i < enemies.objectCount; i++){
+
+enemies.objectArray[i]->position.y = sinf(enemyPhase[i]); //assume phase stored in radians so no conversion needed
+
+enemyPhase[i] += enemyPhaseVelocity[i]*tDelta;
+
 //float player1RotationSpeed=glm::radians(90.0f);
 //GameObject2D*player1=getObject("player1");
 //player1->orientation = player1->orientation + glm::radians(90.0)*tDelta;
+}
 }
 
 
