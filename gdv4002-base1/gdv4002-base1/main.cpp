@@ -73,9 +73,10 @@ static float playerSpeed = 1.0f;//distance per second
 GameObject2D* player = getObject("player");
 
 if (keys.test(key::W) == true) {player->position.y += playerSpeed * (float)tDelta;
-if (keys.test(key::S) == true) {player->position.y += playerSpeed * (float)tDelta;
+if (keys.test(key::S) == true) {player->position.y -= playerSpeed * (float)tDelta;
 
 }
+} 
 
 //float player1RotationSpeed=glm::radians(90.0f);
 //GameObject2D*player1=getObject("player1");
