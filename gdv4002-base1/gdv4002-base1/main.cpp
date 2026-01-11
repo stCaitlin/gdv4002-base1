@@ -10,6 +10,8 @@ void myKeyboardHandler(GLFWwindow*window, int key, int scancode, int action, int
 
 // Global Variables
 std::bitset<5> keys{ 0x0 }; // Bit flags to track which keys are currently pressed 
+glm::vec2 gravity = glm::vec2(0.0f,-1.0f);
+
 
 int main(void) {
 //main function body
