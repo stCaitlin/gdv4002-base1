@@ -54,6 +54,9 @@
     <ClCompile Include="Snowflake.cpp">
       <Filter>My Classes</Filter>
     </ClCompile>
+    <ClCompile Include="Emitter.cpp">
+      <Filter>My Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine.h">
@@ -90,6 +93,9 @@
       <Filter>My Classes</Filter>
     </ClInclude>
     <ClInclude Include="Snowflake.h">
+      <Filter>My Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Emitter.h">
       <Filter>My Classes</Filter>
     </ClInclude>
   </ItemGroup>
