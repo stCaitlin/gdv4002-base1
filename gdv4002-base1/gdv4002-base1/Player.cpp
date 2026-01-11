@@ -1,5 +1,6 @@
 #include "Player.h"
 #include "Keys.h"
+#include "Engine.h"
 #include <bitset>
 
 extern std::bitset<5> keys;
@@ -38,6 +39,11 @@ void Player::update(double tDelta) {
 		F += glm::vec2(thrust, 0.0f);
 
 		F += gravity;
+
+		//add impluse force 
+		if (position.y < -getViewplaneHeight() / 2.0f) {
+			F += glm::vec2(0.0f,20.0f);
+		}
 	}
 
 
