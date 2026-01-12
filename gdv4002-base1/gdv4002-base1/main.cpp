@@ -111,6 +111,18 @@ void myKeyboardHandler(GLFWwindow* window, int key, int scancode, int action, in
 			case GLFW_KEY_S:
 				keys[key::S] = true;
 				break;
+
+			case GLFW_KEY_D:
+				keys[key::D] = true;
+				break;
+
+			case GLFW_KEY_A:
+				keys[key::A] = true;
+				break;
+
+			case GLFW_KEY_SPACE:
+				keys[key::SPACE] = true;
+				break;
 			}
 		
 		}
@@ -126,6 +138,18 @@ void myKeyboardHandler(GLFWwindow* window, int key, int scancode, int action, in
 
 			case GLFW_KEY_S:
 				keys[key::S] = false;
+				break;
+
+			case GLFW_KEY_D:
+				keys[key::D] = false;
+				break;
+
+			case GLFW_KEY_A:
+				keys[key::A] = false;
+				break;
+
+			case GLFW_KEY_SPACE:
+				keys[key::SPACE] = false;
 				break;
 			}
 		 }
