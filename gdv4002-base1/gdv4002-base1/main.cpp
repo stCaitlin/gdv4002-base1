@@ -2,10 +2,12 @@
 #include "Keys.h"
 #include "Player.h"
 #include "Enemy.h"
+//#include "glPrint.h"
 
 #include <bitset>
 
 // Function prototypes
+//void myRender(GLFWwindow*window);
 void myKeyboardHandler(GLFWwindow*window, int key, int scancode, int action, int mods);
 
 // Global Variables
@@ -25,6 +27,12 @@ int main(void) {
 		printf("Cannot setup game window!!!\n");
 		return initResult; // exit if setup failed
 	}
+	/*GLuint myFontNormal = 0;
+	GLuint myFontUnderline = 0;
+
+	myFontNormal = glBuildFont(L"Consolas",24);
+	myFontUnderline = glBuildFont(L"Aptos",24, GLFONT_STYLE::BOLD | 
+	GLFONT_STYLE::UNDERLINE);*/
 
 	//
 	//setup rendering properties (enable blending)
@@ -39,6 +47,7 @@ int main(void) {
 	Player*mainPlayer = new Player(glm::vec2(-1.5f,0.0f),0.0f,glm::vec2(0.5f,0.5f),playerTexture,1.0f);
 	addObject("player",mainPlayer);
 
+	
 	//1.Load enemy texture 
 	GLuint enemyTexture = loadTexture("Resources\\Textures\\Alien02.png");
 
@@ -54,13 +63,11 @@ int main(void) {
 	addObject("enemy2", enemy2);
 	addObject("enemy3", enemy3);
 
-
 	//
 	// Set callback functions
 	//
-
 	setKeyboardHandler(myKeyboardHandler);
-	
+	//setRenderFunction(myRender);
 
 	// Enter main loop - this handles update and render calls
 	engineMainLoop();
@@ -72,6 +79,16 @@ int main(void) {
 	return 0;
 }
 
+
+//void myRender(GLFWwindow* window) {
+////render code here...
+//
+//glSetCurrentFont(GL_FONT_UNDERLINE_THICKNESS_BIT_NV);
+//glColor3f(1.0f, 1.0f, 1.0f);
+//glRasterPos2f(0.0f, 0.0f);
+//glPrint("Hello,World");
+//
+//}
 
 
 void myKeyboardHandler(GLFWwindow* window, int key, int scancode, int action, int mods) {

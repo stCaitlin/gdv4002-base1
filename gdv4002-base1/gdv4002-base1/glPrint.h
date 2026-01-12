@@ -4,6 +4,7 @@
 #define WIN32_LEAN_AND_MEAN
 #include <Windows.h>
 #include "GraphicsCore.h"
+#include "glPrint.h"
 
 enum GLFONT_STYLE {BOLD = 0x01, ITALIC = 0x02, UNDERLINE = 0x04, STRIKETHROUGH = 0x08 };
 
