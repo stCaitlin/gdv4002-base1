@@ -26,12 +26,21 @@ int main(void) {
 		return initResult; // exit if setup failed
 	}
 
+	//
+	//setup rendering properties (enable blending)
+	//
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	glDepthFunc(GL_ALWAYS);
+
+
+	//0.Load player texture and create player object
 	GLuint playerTexture = loadTexture("Resources\\Textures\\player1_ship.png");
 	Player*mainPlayer = new Player(glm::vec2(-1.5f,0.0f),0.0f,glm::vec2(0.5f,0.5f),playerTexture,1.0f);
 	addObject("player",mainPlayer);
 
 	//1.Load enemy texture 
-	GLuint enemyTexture = loadTexture("Resources\\Textures\\Alien01.png");
+	GLuint enemyTexture = loadTexture("Resources\\Textures\\Alien02.png");
 
 	//2.Create enemy objects 
 	Enemy*enemy1 = new Enemy(glm::vec2(0.0f,0.0f),0.0f,glm::vec2(0.5f,0.5f), enemyTexture, 0.0f,glm::radians(45.0f));
@@ -45,13 +54,6 @@ int main(void) {
 	addObject("enemy2", enemy2);
 	addObject("enemy3", enemy3);
 
-
-
-
-
-	//
-	// Setup game scene objects here
-	
 
 	//
 	// Set callback functions
@@ -111,4 +113,6 @@ void myKeyboardHandler(GLFWwindow* window, int key, int scancode, int action, in
 			}
 		 }
 	}
+
+
 
